@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+		
+		<bean id="creditCard" class="Bill_payment_app.CreditcardPayment"/>
+		<bean id="DebitCard" class="Bill_payment_app.DebitCard"/>
+		<bean id="UPI" class="Bill_payment_app.UPI"/>
+		<bean id="BillCollector" class="Bill_payment_app.BillCollector">
+			<property name="payment" ref="UPI"></property>
+		</bean>
+		
+</beans>
+
